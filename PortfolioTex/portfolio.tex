@@ -70,4 +70,25 @@ Today, I spoke with Faisal regarding the Networking of the virtual machines. We 
 \section{Week 06}
 \subsection{Lesson 1}
 Today I was still having a bunch of errors with Cuckoo. Namely, getting the machines to talk to eachother. I fixed the DHCP that i had partially set up last time, Just to make sure that the machines could ping, And The host could ping the guest when the machine was turned on, Which was better than we usually get. I tried to reInstall the agent on the Guest machine, but Virtual Boxes Shared folder systems didn't want to work. I am not sure if that is an error of running Virtual Box inside a Virtual Environement or not, but Im sure i will eventually get that sorted. Once I manage to get the agent back working, which I will try to do before the next Project time, I am hopeful that it may fix the issues regarding the network erroring 
+\subsection{Lesson 2}
+This session i spent some time trying to fix the networking issues, to no avail. I went up and grabbed a spare machine from the PC Maintanence Lab that Hamish had said i was allowed to use. I Spent the rest of the session trying to set up the bios, so that I could boot into a USB. This proven to be difficult as there was a BIOS Lock on the motherboard, but we managed to find the reset bridge and take off the BIOS Password
+\section{Week 07}
+\subsection{Lesson 1}
+I spent this session installing Ubuntu SE onto the machine. This took a lot longer than anticipated, as the network cable I am connected with, is not in good condition, with only 4 of the 8 terminals connected. I set up a basic working environment, and installed X and i3 so i can try and Install Cuckoo with a new guide that faisal found for me. I hope this guide works properly, as it's quite long and complicated
+\subsection{Lesson 2}
+I started installing cuckoo following the guide that faisal sent me. I first had some issues with my locales, which wouldnt let KVM Boot. I made my way through the installation after I fixed that though, and we managed to write a document that had all the errors in the installation guide, that wouldn't run in shell, and I fixed them to the best of my ability. Most of the errors are things such as wrong GPG keys, Incorrect package names, and bad flags.
+\section{Week 08}
+\subsection{Lesson 1}
+My installation broke today, as neither of my databases would connect to their port correctly. After spending some time, checking their configurations, and their status with system.d and journalctl, I decided it would be in my best interests to wipe the machine and try a different installation method. Faisal reccomended I look for a Ubuntu Resetting Program. I found one that was highly rated, and decided to install and run it. It proceeded to wipe my /usr directory before failing, as it nolonger had accessto the usr directiory. I am not sure if this is a bad joke of a program, but it appeared to brick my machine. I guess il try to install Ubuntu on it tomorrow
+\subsection{Lesson 2}
+Today, I went to install Ubuntu, but i couldn't boot into my live medium, as registers 8-15 were apparently not enabled, and thus, it wouldnt let me boot. After a bunch of fluffing around, reseating ram and bios flashing, we managed to boot into the live medium. I decided to try the new Cuckoo installation method that faisal had suggested. This one seemed alot longer than the last one, but it seemed that there were less inconsistencies than that one too. I got upto installing KVM. However virtmanaged was not running, so I called it a day and locked my PC 
+
+\section{Week 09}
+\subsection{Lesson 1}
+As i went to continue my install I found out that error I mentioned on thursday. I decided to google the error, which told me to restart my machine. After I restarted my machine, I noticed that my networking was broken. It said, Network Unmanaged in the systemtray, and i followed every guide i could find to try and fix the error, however, It wasn't fixable. I decided to try 1 last install of cuckoo before I give up on cuckoo entirely, and request a proper DevOPs project. Such projects I am considering, is installing Alpine Linux from Docker, Learn mopre about the Urbit Project, that a large number of Ops engineers are excited about, or just learning tools suc as Jenkins for CL/CI intergration  
+\subsection{Lesson 2}
+This time, I am being as safe as I can. I am using an Ubuntu Desktop 18.04 instead of Ubuntu Server, so there is potentially less to go wrong. This resulted in the install taking much longer, as I no longer had a familiar environment to set things up in, and just general, the system was running slower. I ran into a few problems regarding permissions and packages, although a quick apt search means i can fix them. I got to the same point as last time, where I need to restart the system in order to continue, and I restart it, without causing any crashes to my network. I will call it a day here!
+\section{Week 10}
+\subsection{Lesson 1}
+\subsection{Lesson 2}
 \end{document} 
