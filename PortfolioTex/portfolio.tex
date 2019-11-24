@@ -90,5 +90,37 @@ As i went to continue my install I found out that error I mentioned on thursday.
 This time, I am being as safe as I can. I am using an Ubuntu Desktop 18.04 instead of Ubuntu Server, so there is potentially less to go wrong. This resulted in the install taking much longer, as I no longer had a familiar environment to set things up in, and just general, the system was running slower. I ran into a few problems regarding permissions and packages, although a quick apt search means i can fix them. I got to the same point as last time, where I need to restart the system in order to continue, and I restart it, without causing any crashes to my network. I will call it a day here!
 \section{Week 10}
 \subsection{Lesson 1}
+This session involved me installing some network traffic emulation program. However, this took a very long time, and once it was done, it started to use around 200 percent of my CPU time, so it probably wasn't work keeping around, but in order to not break anything, I decided to keep it as is. It probably isnt worth risking some more Apt clashes to get a bit of a better performance
 \subsection{Lesson 2}
+I got cuckoo installed again, but i keep hitting my head against the wall on the same problem; that the Host and guest cannot network with eachother. This has been an issue for me across both KVM and Oracle Virtual Box, so I am not quite sure what the issues are. My first point of call is checking that my guest is set up correctly, however, I know this is the case as i followed the instructions directly from the cuckoo wiki. So unless the documentaion is completely wrong, It shouldn't be that which is the issue. However, I could be wrong. My main concern is that the polytech network, and the fact that we are using a non standard (for my experience anyway) subnet. But i do not know enough about networking to say that to be sure. 
+
+
+\section*{Holidays}
+I spent the majority of my holidays working through some of my website functionality, where I am using mpd+icecast+ncmpcpp as an internet radio server. My goals for this was to be similar to lainon.life, which is one of my goto places for new music. I also had to work around hosting this locally at my flat, while also not interrupting my other flatmates hosted services. It took a bit, but i managed to get it all working. I also spent some time refamiliarizing myself with tree data structures for ADS, as well as my sorting algorithms. I would have liked to learn some stuff regarding OPS however, there just arent the online resources to get a OPs setup working on a student budget. 
+
+\section{Week 11}
+\subsection{Lesson 1}
+Coming back from the break, I was instructed to give up on my project of getting cuckoo working, as it would likely continue to be fruitless at this time, considering the large amount of time i was putting into it, mixed with the crushing lack of success it was bringing me. I instead was told to do some research on AnyRun and FlareVM, so I will get around to doing that on thursday, but i gave them a quick look, and they look like sensible alternatives to cuckoo
+
+\subsection{Lesson 2}
+I had a look at both FlareVM and AnyRun today. AnyRun seems to be an online version of cuckoo, except they hash and store the results of given input, so that the tests dont always need to be run, Shortening the amount of time it takes for the Malware Analysis turnaround to happen. FlareVM on the otherhand is a little bit of an enigma. It seems like its a virtual machine where you give it malware, and then watch it run from inside that machine itself. Obviously, Im sure its a great idea, although i just don't understand it at the moment.
+
+\section{Week 12}
+\subsection{Lesson 1}
+I spent today writing some very basic programs to send into anyrun to analyze. However, my effort ended up not being that useful, as the anyrun virtual machines are not installed with a python interpreter, so it didn't run, and therefore, wasn't detected as malware. I also threw some other known malware at it, such as some forkbombs, and wanacry, which it caught nicely and quickly, I guess because it has been tested before.  I also found out that anyrun has an API, so you could write your own pipelines to automate sending files to anyrun to be scanned. This is the ideal option to add malware security to an email server, as you can then automatically send the attatchments and check them before the recipient recieves them. My only concern is that this wont work in an end to end encrypted system, as you wouldn't be able to de-encrypt the file, (There is some irony here) and while im sure you could turn 1 end to end pathway into 2, that would violate the users trust of the e2e encrytion system.
+\subsection{Lesson 2}
+
+
+\section{Hiatus and End of Semester}
+I ended up having a 2 week break from Polytech as i needed to play a few shows to fill in for some old friends. Over this time, I did alot of programming in my spare time. 
+
+After I came back, I spent a long time working on my poster for the showcase about malware analysis. I also reguarly would talk to my peers about my project to make sure I could explain the basic concepts and get across some of the nuance regarding Dynamic Malware Analysis, so I would be well versed for when showcase happened, because in a way, The Showcase would be really where i have to perform, and show people Dynamic Malware Analysis. I spent some time trying to come up with a few different diagrams, to show how you can make a pipeline to add Dynamic Malware Analysis for, although, trying to make one simple enough to be understood, and complex enough to be interesting prooved hard, but I eventually came up with a design i liked
+
+I also took this time to write the report i was asked about. This served two purposes. The first being it would act as something to hand in to show that I understood what I have been working on this semester regarding Dynamic Malware Analsis, and the other was that it would help me prove to myself, that I understand the concept well enough to talk about it come showcase. I did have to touch up on some research, and double check some things, although it would be far better for me to be wrong now, than to be wrong on the final day at showcase.  After my poster was made, I had a thorough discussion with Faisal, where he asked me a fair amount of curveball questions. He then told be he was happy with how i was discussing Dynamic Malware Analysis, except i needed to put some more passion into it to make it more exciting to listen to. So I am doing that now to try and improve the delivery of my presentation at showcase
+
+
+\section{Showcase}
+
+Showcase was a very interesting experience. While the OPS group wasn't one of the most popular groups, we did have a few people come around to ask us what we were doing. I had a good talk with people from all different experience levels with malware and programming. I got some interesting questions such as "Why isn't this technology used everywhere automatically" and "Why isnt antivirus good enough?" I had prepared for these questions thankfully through my grilling by Faisal, who i felt really helped me to get through the night. Most people told me that they walked away knowing significantly more, about not only Malware Analysis, but also about how malware works in general, which I think, goes hand in hand with Malware Analysis
+
 \end{document} 
